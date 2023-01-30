@@ -8,14 +8,19 @@
   </head>
   <body>
     <h1>Random Number Game</h1>
-    <div class="randomNumber">
-      <span>Generate a number between 0 and </span>
-      <input type="number" name="" id="generateNumber" />
-    </div>
-    <div class="guessNumber">
-      <span>Guess the number : </span>
-      <input type="number" name="" id="guessNumber" />
+    <form id="generate-number">
+      <span>Generate a number between 0 and</span>
+      <input type="number" min="0" />
+    </form>
+    <form id="guess-number">
+      <span>Guess the number: </span>
+      <input type="number" min="0" />
       <button>Play!</button>
+    </form>
+    <div class="result">
+      <span class="you-chose"></span>
+      <span class="machine-chose"></span>
+      <p class="display-result"></p>
     </div>
     <script src="index.js"></script>
   </body>
