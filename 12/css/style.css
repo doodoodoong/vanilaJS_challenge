@@ -1,0 +1,85 @@
+@import "reset.css";
+/* title */
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Work+Sans&display=swap");
+/* font-family: 'Fugaz One', cursive; */
+/* font-size: 57px */
+
+/* sub title */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+/* font-family: 'Work Sans', sans-serif; */
+/* font-size: 45px */
+
+/* content */
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+/* font-family: 'Mulish', sans-serif; */
+/* font-size: 36px */
+
+body {
+  margin: 10px;
+}
+
+/* menu */
+body > nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Fugaz One", cursive;
+  font-size: 57px;
+}
+
+/* menu -> weather */
+#weather {
+  font-size: xx-large;
+}
+
+/* menu -> clock */
+#clock {
+  font-size: xx-large;
+}
+
+/* to-do list */
+body > main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* to-do list container */
+body > main > div {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* to-do list title */
+body > main > div > div {
+  font-family: "Work Sans", sans-serif;
+  font-size: 45px;
+}
+
+/* to-do list content */
+body > main > div > ul > span {
+  font-family: "Mulish", sans-serif;
+  font-size: 36px;
+}
+
+/* hidden */
+.hidden {
+  display: none;
+}
+
+input {
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: white;
+  font-size: 30px;
+}
