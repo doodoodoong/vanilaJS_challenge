@@ -18,12 +18,20 @@ body {
   margin: 10px;
 }
 
+main {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* menu */
 body > nav {
+  border-radius: 6px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   font-family: "Fugaz One", cursive;
   font-size: 57px;
+  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 /* menu -> weather */
@@ -46,7 +54,7 @@ body > main {
 
 /* to-do list container */
 body > main > div {
-  height: 200px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -60,14 +68,22 @@ body > main > div {
 
 /* to-do list title */
 body > main > div > div {
+  padding: 40px;
   font-family: "Work Sans", sans-serif;
   font-size: 45px;
 }
 
 /* to-do list content */
-body > main > div > ul > span {
+body > main > div.todo > div.todoList > ul > span {
   font-family: "Mulish", sans-serif;
-  font-size: 36px;
+  font-size: 35px;
+}
+
+/* to-do list container */
+body > main > div.todo > div.todoList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* hidden */
@@ -76,10 +92,24 @@ body > main > div > ul > span {
 }
 
 input {
-  border: 0;
+  border: 1px;
   border-radius: 15px;
-  outline: none;
+  outline: solid;
   padding-left: 10px;
   background-color: white;
   font-size: 30px;
+}
+
+/* fade-in */
+.fade-in {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
