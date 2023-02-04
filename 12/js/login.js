@@ -7,12 +7,26 @@ const userInputNameForm = document.querySelector(
 const userInputName = document.querySelector(
   "body > main > div.login > form > input[type=text]"
 );
+const helloUser = document.querySelector("#user-name");
+const loginForm = document.querySelector("body > main > div.login");
+const navBar = document.querySelector("body > nav");
+const todoList = document.querySelector("body > main > div.todo.hidden");
 
 function displayName(e) {
   e.preventDefault();
   localStorage.setItem("userName", userInputName.value);
-  const helloUser = document.querySelector("#user-name");
   helloUser.innerText = `Hello, ${localStorage.getItem("userName")}`;
+  loginForm.classList.add("hidden");
+  navBar.classList.remove("hidden");
+  todoList.classList.remove("hidden");
 }
 
-userInputNameForm.addEventListener("submit", displayName);
+if (localStorage.getItem("userName") !== null) {
+  helloUser.innerText = `Hello, ${localStorage.getItem("userName")}`;
+  loginForm.classList.add("hidden");
+  navBar.classList.remove("hidden");
+  todoList.classList.remove("hidden");
+} else {
+  navBar.classList.add("hidden");
+  userInputNameForm.addEventListener("submit", displayName);
+}
