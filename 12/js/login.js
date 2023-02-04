@@ -16,7 +16,8 @@ function displayName(e) {
   e.preventDefault();
   localStorage.setItem("userName", userInputName.value);
   helloUser.innerText = `Hello, ${localStorage.getItem("userName")}`;
-  loginForm.classList.add("hidden");
+  loginForm.classList.add("fade-out");
+  setInterval(() => loginForm.classList.add("hidden"), 2000);
   navBar.classList.remove("hidden");
   todoList.classList.remove("hidden");
 }

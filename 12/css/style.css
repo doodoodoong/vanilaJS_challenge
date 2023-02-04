@@ -113,3 +113,31 @@ input {
     opacity: 1;
   }
 }
+
+/* fade-out */
+.fade-out {
+  animation: fadeout 2s;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* moving-up */
+.moving-up {
+  animation: movingup 2s ease-in-out;
+}
+
+@keyframes movingup {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
