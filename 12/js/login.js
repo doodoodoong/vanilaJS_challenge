@@ -16,10 +16,12 @@ function displayName(e) {
   e.preventDefault();
   localStorage.setItem("userName", userInputName.value);
   helloUser.innerText = `Hello, ${localStorage.getItem("userName")}`;
-  loginForm.classList.add("fade-out");
+  loginForm.classList.add("login-success");
   setInterval(() => loginForm.classList.add("hidden"), 2000);
-  navBar.classList.remove("hidden");
-  todoList.classList.remove("hidden");
+  setInterval(() => navBar.classList.remove("hidden"), 2000);
+  setInterval(() => navBar.classList.add("fade-in"), 2000);
+  setInterval(() => todoList.classList.remove("hidden"), 2000);
+  setInterval(() => todoList.classList.add("fade-in"), 2000);
 }
 
 if (localStorage.getItem("userName") !== null) {

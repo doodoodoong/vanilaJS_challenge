@@ -35,23 +35,9 @@ function todoAdd(e) {
 
 function deleteTodo(e) {
   const ul = e.target.parentElement;
-  console.log(ul);
   toDos = toDos.filter((i) => i.id !== parseInt(ul.className));
   ul.remove();
   localStorage.setItem("todoList", JSON.stringify(toDos));
-  const list = JSON.parse(localStorage.getItem("todoList"));
-  for (i = 0; i <= list.length - 1; i++) {
-    const ul = document.createElement("ul");
-    todoUl.appendChild(ul);
-    ul.className = String(list[i].id);
-    const checkbox = document.createElement("input");
-    checkbox.setAttribute("type", "checkbox");
-    ul.appendChild(checkbox);
-    checkbox.addEventListener("change", deleteTodo);
-    const span = document.createElement("span");
-    ul.appendChild(span);
-    span.innerText = `${list[i].content}`;
-  }
 }
 
 if (localStorage.getItem("todoList") !== null) {

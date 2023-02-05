@@ -21,6 +21,7 @@ body {
 main {
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: scroll;
 }
 /* menu */
 body > nav {
@@ -48,12 +49,14 @@ body > nav {
 body > main {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: baseline;
   align-items: center;
 }
 
 /* to-do list container */
 body > main > div {
+  margin-top: 60px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -140,4 +143,9 @@ input {
   to {
     transform: translateY(-100%);
   }
+}
+
+/* login-success */
+.login-success {
+  animation: movingup 2s ease-in-out, fadeout 2s;
 }
